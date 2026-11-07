@@ -35,6 +35,8 @@ doadores.forEach((d) => {
   }
 });
 doacoes.sort((a, b) => (a.data < b.data ? 1 : -1));
+// 'desde' = primeira doação do doador (coerente com o histórico)
+doadores.forEach((d) => { d.desde = doacoes.filter((g) => g.doadorId === d.id).reduce((m, g) => (g.data < m ? g.data : m), '9999'); });
 
 export const voluntarios = [
   ['Ana Beatriz Moraes','Cozinha','Tardes de sáb.'],['Caio Vasconcelos','Logística','Manhãs de seg.'],['Dália Ferrer','Educação','Qua. e sex.'],['Elias Montenegro','Comunicação','Flexível'],

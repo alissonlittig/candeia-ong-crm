@@ -21,7 +21,7 @@
 </script>
 
 <header class="top">
-  <div><h1>Bom dia, equipe.</h1><p>Resumo de {dataBR(HOJE)} · Instituto Candeia (organização fictícia)</p></div>
+  <div><h1>Visão geral da equipe.</h1><p>Resumo de {dataBR(HOJE)} · Instituto Candeia (organização fictícia)</p></div>
   <button class="btn" onclick={() => ctx.abreDoacao()}>+ Registrar doação</button>
 </header>
 
